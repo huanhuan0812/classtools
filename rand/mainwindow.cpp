@@ -8,8 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     ui->setupUi(this);
-    
 
+    connect(ui->main_settings_btn, &QPushButton::clicked, this, &MainWindow::openDialog);
 }
 
 MainWindow::~MainWindow()

@@ -1,5 +1,6 @@
 <RCC>
-    <qresource prefix="/">
-    
-    </qresource>
+  <qresource prefix="/">
+    <file>run.jpg</file>
+    <file>HarmonyOS_Sans_SC_Medium.ttf</file>
+  </qresource>
 </RCC>
