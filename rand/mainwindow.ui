@@ -68,7 +68,7 @@
      <rect>
       <x>230</x>
       <y>140</y>
-      <width>130</width>
+      <width>41</width>
       <height>20</height>
      </rect>
     </property>
@@ -128,6 +128,16 @@ border-radius: 25px;
     </property>
     <property name="text">
      <string>重复</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="count_ledit">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>140</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
     </property>
    </widget>
   </widget>

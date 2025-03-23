@@ -21,6 +21,9 @@ set(PROJECT_SOURCES
         run.jpg
         settings_dlg.h
         settings_dlg.cpp
+        settingdlg.cpp
+        settingdlg.h
+        settingdlg.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

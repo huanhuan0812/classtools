@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include"settings_dlg.h"
+#include "settingdlg.h"
 #include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
@@ -21,17 +21,12 @@ public:
 
 private:
     Ui::MainWindow *ui;
-
+    std::string lang="en_us";
+    int be=0,ed=0;
+    int cnt=1;
+    std::unordered_map<int,int>bannednum;
 private slots:
-    void openDialog()
-    {
-        SettingDialog dialog(this);
-        if (dialog.exec() == QDialog::Accepted) {
-            QMessageBox::information(this, "Info", "You clicked OK!");
-        } else {
-            QMessageBox::information(this, "Info", "You clicked Cancel!");
-        }
-    }
+    void openDialog();
 };
 
 #endif // MAINWINDOW_H
