@@ -140,6 +140,25 @@ border-radius: 25px;
      </rect>
     </property>
    </widget>
+   <widget class="QLabel" name="count_warn_lab">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>160</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HarmonyOS Sans SC</family>
+      <pointsize>7</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

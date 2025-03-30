@@ -22,11 +22,13 @@ public:
 private:
     Ui::MainWindow *ui;
     std::string lang="en_us";
-    int be=0,ed=0;
+    int be=0,ed=100;
     int cnt=1;
+    int len=100;
     std::unordered_map<int,int>bannednum;
 private slots:
     void openDialog();
+    void startrand();
 };
 
 #endif // MAINWINDOW_H

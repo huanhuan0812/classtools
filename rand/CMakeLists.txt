@@ -19,11 +19,10 @@ set(PROJECT_SOURCES
         mainwindow.ui
         rand.qrc
         run.jpg
-        settings_dlg.h
-        settings_dlg.cpp
         settingdlg.cpp
         settingdlg.h
         settingdlg.ui
+        lang/en_us.txt
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
