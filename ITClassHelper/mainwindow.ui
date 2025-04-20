@@ -32,31 +32,38 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="m_refreshButton">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>90</y>
-      <width>75</width>
-      <height>24</height>
+      <y>50</y>
+      <width>241</width>
+      <height>101</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="m_statusLabel">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>40</y>
-      <width>54</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>54</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

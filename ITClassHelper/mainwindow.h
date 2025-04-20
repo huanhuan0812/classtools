@@ -2,13 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include<QtNetwork/QNetworkInformation>
-#include <QMessageBox>
+#include <QNetworkInformation>
+#include <QLabel>
+#include<QKeyEvent>
 
 QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-}
+namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -19,14 +18,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    private slots:
+        void updateNetworkStatus(QNetworkInformation::Reachability reachability);
 private:
     Ui::MainWindow *ui;
     QNetworkInformation *m_netInfo = nullptr;
-
-
-private slots:
-    void updateNetworkStatus(QNetworkInformation::Reachability reachability);
-    void onRefreshClicked();
+    void initNetworkMonitoring();
+    QString reachabilityToString(QNetworkInformation::Reachability reachability);
+    void keyPressEvent(QKeyEvent *event);
 };
-
 #endif // MAINWINDOW_H
