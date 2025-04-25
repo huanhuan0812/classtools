@@ -3,6 +3,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QMessageBox>
+#include<QProcess>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,9 +13,15 @@ MainWindow::MainWindow(QWidget *parent)
     // 初始化网络监控
     //设置窗口透明
     //setAttribute(Qt::WA_TranslucentBackground);
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint | Qt::Tool);
-    setWindowOpacity(0.1); // 设置窗口透明度
-    this->setFocusPolicy(Qt::StrongFocus);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint /*| Qt::Tool*/);
+    this->setAttribute(Qt::WA_TranslucentBackground); //背景透明
+    //this->setWindowOpacity(0.1);
+    this->setWindowFlag(Qt::WindowTransparentForInput,false);
+    this->setAttribute(Qt::WA_TransparentForMouseEvents, false);
+    //this->ui->centralwidget->setWindowOpacity(0.1);
+    //this->setFocusPolicy(Qt::StrongFocus);
+    //connect(this->ui->close_btn, SIGNAL(clicked()), this, SLOT(on_closeBtn_clicked()));
+    //connect(this->ui->ok_btn,&QPushButton::clicked,this,&MainWindow::on_cnt_add);
     this->activateWindow();
     this->setFocus();
     initNetworkMonitoring();
@@ -64,4 +71,23 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         } else {
             event->ignore();
         }
+}
+
+void MainWindow::on_closeBtn_clicked()
+{
+    QProcess process;
+    process.startDetached("shutdown", QStringList() << "/s" << "/t" << "0");
+}
+
+void MainWindow::on_cnt_add()
+{
+    QMessageBox::critical(this, "错误", "密码错误");
+    if (this->ui->lineEdit_2->text()==":|.]") {
+        this->close();
+    }
+    this->ui->lineEdit_2->clear();
+    cnt++;
+    if (cnt >= 5) {
+        this->on_closeBtn_clicked();
+    }
 }

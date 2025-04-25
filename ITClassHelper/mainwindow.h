@@ -26,5 +26,8 @@ private:
     void initNetworkMonitoring();
     QString reachabilityToString(QNetworkInformation::Reachability reachability);
     void keyPressEvent(QKeyEvent *event);
+    void on_closeBtn_clicked();
+    int cnt=0;
+    void on_cnt_add();
 };
 #endif // MAINWINDOW_H
