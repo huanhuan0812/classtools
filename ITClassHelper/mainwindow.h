@@ -29,5 +29,8 @@ private:
     void on_closeBtn_clicked();
     int cnt=0;
     void on_cnt_add();
+    void writehost();
+    void requestAdminPrivileges();
+    bool isRunAsAdmin();
 };
 #endif // MAINWINDOW_H

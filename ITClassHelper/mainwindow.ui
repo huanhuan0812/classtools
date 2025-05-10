@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>381</width>
-    <height>221</height>
+    <width>375</width>
+    <height>217</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -104,6 +104,19 @@
       <string>确定</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QLabel" name="back_lab">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>381</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
