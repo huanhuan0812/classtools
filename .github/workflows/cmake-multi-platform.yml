@@ -17,7 +17,7 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]
         floder: [rand-simple, rand, ITClassHelper]
       fail-fast: false
-    name: Build on ${{ matrix.os }}
+    name: ${{ matrix.floder }} Build on ${{ matrix.os }}
     steps:
     - name: Git checkout
       uses: actions/checkout@v3
@@ -62,12 +62,12 @@ jobs:
 
     # Create build directory
     - name: Create build directory
-      run: mkdir build
+      run: mkdir ${{ matrix.floder }}/build
 
     # Configure with CMake (Ninja generator + Release mode)
     - name: Configure with CMake
-      run: cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -B build
+      run:  cd ${{ matrix.floder }} & cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -B build
 
     # Build with Ninja
     - name: Build application
-      run: cd build
+      run: cd ${{ matrix.floder }}/build
