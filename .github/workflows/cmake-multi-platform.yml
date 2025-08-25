@@ -15,16 +15,17 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
+        floder: [rand-simple, rand, ITClassHelper]
       fail-fast: false
     name: Build on ${{ matrix.os }}
     steps:
     - name: Git checkout
       uses: actions/checkout@v3
 
-    - name: ls
+    - name: ls and goto floder
       run: |
         ls
-        cd rand-simple
+        cd matrix.floder
         ls
 
 
@@ -70,5 +71,3 @@ jobs:
     # Build with Ninja
     - name: Build application
       run: cd build && ninja
-
-  
