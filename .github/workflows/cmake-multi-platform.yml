@@ -25,7 +25,7 @@ jobs:
     - name: ls and goto floder
       run: |
         ls
-        cd matrix.floder
+        cd ${{ matrix.floder }}
         ls
 
 
@@ -70,4 +70,4 @@ jobs:
 
     # Build with Ninja
     - name: Build application
-      run: cd build && ninja
+      run: cd build
