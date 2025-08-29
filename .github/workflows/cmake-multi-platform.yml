@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
-        floder: [rand-simple, rand, ITClassHelper/full, ITClassHelper/single/hosteditor]
+        floder: [rand-simple, rand-full, ITClassHelper/full, ITClassHelper/single/hosteditor]
       fail-fast: false
     name: ${{ matrix.floder }} Build on ${{ matrix.os }}
     steps:
