@@ -1,4 +1,4 @@
-name: Build and Package Qt Application with CMake (Release + Ninja)
+name: Build all
 
 on:
   workflow_dispatch
